@@ -1,0 +1,109 @@
+.one_model-container {
+  display: flex;
+  flex-direction: column;
+  width: 56%; /* Occupy 56% of the container's width */
+  min-height: 100vh; /* Ensure it takes up the full viewport height */
+  max-height: 100vh; /* Prevent it from growing beyond the viewport height */
+  background-color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%); /* Start hidden on the right */
+  transition: transform 0.5s ease-in-out; /* For slide effect */
+  z-index: 1000; /* Ensure it's above other elements */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.one_model-container.slide-in {
+  transform: translateX(0); /* Slide in from the right */
+}
+
+.one_model-container.slide-out {
+  transform: translateX(100%); /* Slide out to the right */
+}
+
+.one_close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1010; /* Higher z-index to ensure the button is above other elements */
+}
+
+.one_close-btn svg {
+  width: 36px;
+  height: 36px;
+  stroke: #000; /* Black color for visibility */
+}
+
+.one_divider-line {
+  width: 100%;
+  height: 4px; /* Increase the height to make it more prominent */
+  background-color: #000; /* Use solid black for maximum contrast */
+  border: none; /* Remove default borders */
+  margin: 20px 0; /* Spacing above and below */
+  z-index: 1000; /* Match or exceed the container's z-index */
+}
+
+.one_image-text-section {
+  display: flex;
+  width: 100%;
+}
+
+.one_left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%; /* Occupy 20% of the container's width */
+}
+
+.one_right-section {
+  width: 80%; /* Occupy 80% of the container's width */
+  padding-left: 20px;
+}
+
+.one_ceo-profile, .one_qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.one_profile-image, .one_qr-image {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.one_profile-image {
+  border-radius: 50%; /* Optional: Make the CEO image circular */
+}
+
+.one_qr-image {
+  border: 2px solid #ccc; /* Optional: Border to highlight the QR code */
+  border-radius: 8px; /* Optional: Slightly rounded corners for the QR code */
+}
+
+.one_ceo-profile h1 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+.one_ceo-profile p, .one_qr-code p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 3px 0;
+}
+
+.one_description p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}

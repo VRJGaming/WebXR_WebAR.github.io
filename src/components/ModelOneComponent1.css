@@ -1,0 +1,87 @@
+.model-Two-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 56%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Start off-screen */
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Easing for a smoother slide */
+  z-index: 100;
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 20px; /* Adds padding around the content */
+}
+
+.model-one-container.slide-in {
+  transform: translateX(0); /* Slide into view */
+  opacity: 1;
+}
+
+.model-one-container.slide-out {
+  transform: translateX(100%); /* Slide out of view */
+  opacity: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn svg {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 50px 0; /* 20px gap above and below the line */
+}
+
+.content-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0; /* 10px gap above and below the heading */
+}
+
+.content-paragraph {
+  font-size: 16px;
+  margin: 10px 0; /* 10px gap above and below the paragraph */
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0; /* 10px gap above and below the image */
+  position: relative;
+}
+
+.slideshow-image {
+  width: 80%;
+  height: auto;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-button:hover {
+  color: #000;
+}

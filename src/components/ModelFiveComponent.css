@@ -1,0 +1,110 @@
+.five_model-container {
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+    min-height: 100vh;
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .five_model-container.slide-in {
+    transform: translateX(0);
+  }
+  
+  .five_model-container.slide-out {
+    transform: translateX(100%);
+  }
+  
+  .five_close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1010;
+    
+  }
+  
+  .five_close-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #000;
+  }
+  
+  .five_divider-line {
+    width: 100%;
+    height: 2px;
+    background-color: #444;
+    margin: 40px 0;
+  }
+  
+  .five_image-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .five_nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+  }
+  
+  .five_nav-button.prev {
+    left: 60px; /* Adjust this value to position the button */
+  }
+  
+  .five_nav-button.next {
+    right: 60px; /* Adjust this value to position the button */
+  }
+  
+  .five_nav-button svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: #000; /* Set SVG stroke color to black */
+    stroke-width: 20px;
+  }
+  
+  .five_image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .five_slideshow-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .five_image-text {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    line-height: 1.4;
+    margin: 10px 0;
+  }
+  
